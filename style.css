@@ -1,0 +1,111 @@
+[data-theme="dark"] {
+    --background: #000814;
+    --element1: #003566;
+    --element2: #001d3d;
+    --text: #fff;
+}
+
+[data-theme="light"] {
+    --background: #fafafa;
+    --element1: #006d77;
+    --element2: #edf6f9;
+    --text: #000;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,600;6..12,800&family=Roboto&family=Ubuntu:wght@500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--text);
+    transition-property: color, background-color, box-shadow, background, border-bottom;
+    transition-duration: 0.5s;
+    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+button,
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+body {
+    background-color: var(--background);
+}
+
+header {
+    height: 100px;
+    background-color: var(--element2);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+#displaySwitch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    user-select: none;
+    font-size: xx-large;
+}
+
+h1 {
+    font-size: 40px;
+    padding: 25px 0 0 80px;
+    /*text-align: center;*/
+    color: var(--text);
+}
+
+
+main {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fill, 500px);
+    padding: 50px 10px 10px 10px;
+    margin: 50px;
+    justify-content: space-between;
+}
+
+.project {
+    height: fit-content;
+    width: 400px;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(to right, transparent 2%, var(--element1) 10%, transparent);
+    transition-property: padding-left;
+    transition-duration: 0.5s;
+}
+
+.project:hover {
+    padding-left: 100px;
+}
+
+.projectTitle {
+    font-size: xx-large;
+}
+
+@media screen and (max-width: 540px) {
+
+    body {
+        margin: 50px 20px;
+    }
+
+    main {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .project {
+        height: fit-content;
+        width: 200px;
+    }
+
+    .project:hover {
+        padding-left: 60px;
+    }
+}

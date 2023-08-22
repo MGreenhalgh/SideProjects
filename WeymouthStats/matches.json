@@ -1,0 +1,725 @@
+[
+    {
+        "date": "2023-08-05T15:00:00+0100",
+        "opposition": "St. Albans",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 2,
+        "awayScore": 1,
+        "attendance": 1188,
+        "motm": "Bearwish",
+        "events": [
+            {
+                "type": "goal",
+                "team": "home",
+                "player": "Fage",
+                "time": "35",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "home",
+                "player": "Rasulo",
+                "time": "54",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Bearwish",
+                "time": "75",
+                "pen": false
+            },
+            {
+                "type": "penMiss",
+                "team": "home",
+                "player": "Blackman",
+                "time": "54"
+            },
+            {
+                "type": "penMiss",
+                "team": "away",
+                "player": "Bearwish",
+                "time": "81"
+            }
+        ],
+        "yellows": [
+            {
+                "team": "home",
+                "player": "Rasulo"
+            },
+            {
+                "team": "home",
+                "player": "Georgiou"
+            },
+            {
+                "team": "away",
+                "player": "Goodship"
+            },
+            {
+                "team": "away",
+                "player": "Howe"
+            },
+            {
+                "team": "away",
+                "player": "Rowan"
+            },
+            {
+                "team": "away",
+                "player": "Cheshire"
+            }
+        ]
+    },
+    {
+        "date": "2023-08-12T15:00:00+0100",
+        "opposition": "Dartford",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 1,
+        "awayScore": 0,
+        "attendance": 1087,
+        "motm": "McQuoid",
+        "events": [
+            {
+                "type": "goal",
+                "team": "home",
+                "player": "Rollinson",
+                "time": "11",
+                "pen": false
+            }
+        ],
+        "yellows": [
+            {
+                "team": "home",
+                "player": "McQuoid"
+            },
+            {
+                "team": "home",
+                "player": "Goodship"
+            },
+            {
+                "team": "home",
+                "player": "Bearwish"
+            },
+            {
+                "team": "home",
+                "player": "Wabo"
+            },
+            {
+                "team": "home",
+                "player": "Cheshire"
+            },
+            {
+                "team": "home",
+                "player": "Roberts"
+            },
+            {
+                "team": "away",
+                "player": "Miller-Rodney"
+            },
+            {
+                "team": "away",
+                "player": "Odaudu"
+            }
+        ]
+    },
+    {
+        "date": "2023-08-15T19:45:00+0100",
+        "opposition": "Taunton",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 1,
+        "awayScore": 1,
+        "attendance": 1252,
+        "motm": "Cheshire",
+        "events": [
+            {
+                "type": "goal",
+                "team": "home",
+                "player": "Roberts",
+                "time": "36",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Morgan",
+                "time": "65",
+                "pen": false
+            }
+        ],
+        "yellows": [
+            {
+                "team": "home",
+                "player": "McQuoid"
+            },
+            {
+                "team": "home",
+                "player": "Rowan"
+            },
+            {
+                "team": "away",
+                "player": "Irish"
+            },
+            {
+                "team": "away",
+                "player": "Lucas"
+            },
+            {
+                "team": "away",
+                "player": "Morgan"
+            },
+            {
+                "team": "away",
+                "player": "Day"
+            },
+            {
+                "team": "away",
+                "player": "Smith"
+            }
+        ]
+    },
+    {
+        "date": "2023-08-19T15:00:00+0100",
+        "opposition": "Hemel Hempstead",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 1,
+        "awayScore": 2,
+        "attendance": "Unknown",
+        "motm": "Benfield",
+        "events": [
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Goodship",
+                "time": "25",
+                "pen": true
+            },
+            {
+                "type": "goal",
+                "team": "home",
+                "player": "Ajayi",
+                "time": "42",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Stagg",
+                "time": "78",
+                "pen": false
+            }
+        ],
+        "yellows": [
+            {
+                "team": "away",
+                "player": "Rees"
+            }
+        ]
+    },
+    {
+        "date": "2023-08-26T15:00:00+0100",
+        "opposition": "Chelmsford",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-08-28T15:00:00+0100",
+        "opposition": "Worthing",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-09-02T15:00:00+0100",
+        "opposition": "Maidstone United",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-09-05T19:45:00+0100",
+        "opposition": "Hampton & Richmond",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-09-09T15:00:00+0100",
+        "opposition": "Dover",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-09-23T15:00:00+0100",
+        "opposition": "Chippenham",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-10-07T15:00:00+0100",
+        "opposition": "Slough",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-10-14T15:00:00+0100",
+        "opposition": "Tonbridge",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-10-21T15:00:00+0100",
+        "opposition": "Eastbourne",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-10-24T19:45:00+0100",
+        "opposition": "Yeovil",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-10-28T15:00:00+0100",
+        "opposition": "Havant & Waterlooville",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-11-04T15:00:00+0000",
+        "opposition": "Welling",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-11-07T19:45:00+0000",
+        "opposition": "Bath",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-11-11T15:00:00+0000",
+        "opposition": "Farnborough",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-11-14T19:45:00+0000",
+        "opposition": "Torquay",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-11-21T19:45:00+0000",
+        "opposition": "Truro",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-11-25T15:00:00+0000",
+        "opposition": "Aveley",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-12-02T15:00:00+0000",
+        "opposition": "Braintree",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-12-16T15:00:00+0000",
+        "opposition": "Chippenham",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-12-23T15:00:00+0000",
+        "opposition": "Dover",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2023-12-26T15:00:00+0000",
+        "opposition": "Weston-super-Mare",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-01-01T15:00:00+0000",
+        "opposition": "Weston-super-Mare",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-01-06T15:00:00+0000",
+        "opposition": "Tonbridge",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-01-13T15:00:00+0000",
+        "opposition": "Slough",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-01-20T15:00:00+0000",
+        "opposition": "St. Albans",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-01-23T19:45:00+0000",
+        "opposition": "Taunton",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-01-27T15:00:00+0000",
+        "opposition": "Dartford",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-02-03T15:00:00+0000",
+        "opposition": "Hemel Hempstead",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-02-10T15:00:00+0000",
+        "opposition": "Chelmsford",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-02-17T15:00:00+0000",
+        "opposition": "Worthing",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-02-20T19:45:00+0000",
+        "opposition": "Hampton & Richmond",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-02-24T15:00:00+0000",
+        "opposition": "Maidstone United",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-03-02T15:00:00+0000",
+        "opposition": "Torquay",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-03-09T15:00:00+0000",
+        "opposition": "Aveley",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-03-12T19:45:00+0000",
+        "opposition": "Truro",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-03-16T15:00:00+0000",
+        "opposition": "Braintree",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-03-23T15:00:00+0000",
+        "opposition": "Havant & Waterlooville",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-03-29T15:00:00+0000",
+        "opposition": "Bath",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-04-01T15:00:00+0000",
+        "opposition": "Yeovil",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-04-06T15:00:00+0000",
+        "opposition": "Eastbourne",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-04-13T15:00:00+0000",
+        "opposition": "Welling",
+        "competition": "league",
+        "venue": "away",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    },
+    {
+        "date": "2024-04-20T15:00:00+0000",
+        "opposition": "Farnborough",
+        "competition": "league",
+        "venue": "home",
+        "homeScore": 0,
+        "awayScore": 0,
+        "attendance": 0,
+        "motm": "",
+        "events": [],
+        "yellows": []
+    }
+]

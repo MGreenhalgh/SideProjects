@@ -1,0 +1,460 @@
+* {
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #ccc;
+}
+
+body {
+    background-color: #222;
+}
+
+header {
+    width: 100%;
+    height: 160px;
+    background-color: #333;
+    background: linear-gradient(#222, #333);
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    color: #fff;
+    font-size: 72px;
+    font-weight: bold;
+}
+
+header img {
+    width: 100px;
+}
+
+main {
+    margin: 0 auto;
+    width: 70%;
+    display: flex
+}
+
+#sidebarSort {
+    margin: 5px 0 0 0;
+    padding: 5px;
+    height: 25px;
+    width: 100%;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #666;
+    cursor: pointer;
+}
+
+#sidebarHolder {
+    max-height: calc(100vh - 190px);
+}
+
+#sidebar {
+    width: 175px;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 190px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.sidebarPlayer {
+    border-bottom: 2px solid #666;
+    padding: 10px 5px;
+    cursor: pointer;
+    font-size: small;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+.sidebarPlayer:hover {
+    background-color: #333;
+}
+
+.sidebarPlayer:active {
+    background-color: #444;
+}
+
+.sidebarPlayerName {
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.sidebarPlayerInfo {
+    display: flex;
+    gap: 10px;
+}
+
+.sidebarPlayerInfo span.sidebarPlayerInfoPos {
+    text-transform: uppercase;
+}
+
+#profile {
+    padding: 50px 80px;
+    display: grid;
+    grid-template-areas:
+        "name  name  name"
+        "pic   info  pitch"
+        "stats stats stats";
+    grid-template-rows: 60px 200px 1fr;
+    grid-template-columns: 200px 1fr 135px;
+    gap: 50px;
+    width: 100%;
+}
+
+#playerPic {
+    max-width: 200px;
+    border-radius: 40px;
+    grid-area: pic;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+#profile h2 {
+    color: #fff;
+    font-size: 60px;
+    grid-area: name;
+    display: flex;
+    align-items: center;
+}
+
+#profile .captain {
+    background-color: yellow;
+    border-radius: 50%;
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+    height: 40px;
+    width: 40px;
+    margin-left: 20px;
+    text-align: center;
+    line-height: 40px;
+}
+
+#playerInfo {
+    grid-area: info;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
+#playerInfo>div>div {
+    color: #fff;
+    font-weight: bold;
+    font-size: small;
+    margin-bottom: 5px;
+}
+
+#playerInfo span {
+    font-size: large;
+}
+
+#positionGraphic {
+    background: no-repeat url(images/FootballPitch.svg);
+    background-size: contain;
+    width: 135px;
+    position: relative;
+    border-radius: 5px;
+    grid-area: pitch;
+}
+
+.positionMarker {
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background-color: #93d5f5;
+    border: #740b1c solid 3px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: #740b1c;
+    font-size: x-small;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.positionMarker.otherPosition {
+    opacity: 0.3;
+}
+
+.lw,
+.lm,
+.lwb,
+.lb {
+    left: 16%;
+}
+
+.st,
+.am,
+.cm,
+.dm,
+.cb,
+.gk {
+    left: 50%
+}
+
+.rw,
+.rm,
+.rwb,
+.rb {
+    left: 82%
+}
+
+.st {
+    top: 12%;
+}
+
+.lw,
+.am,
+.rw {
+    top: 30%;
+}
+
+.lm,
+.cm,
+.rm {
+    top: 50%;
+}
+
+.lwb,
+.dm,
+.rwb {
+    top: 66%;
+}
+
+.lb,
+.cb,
+.rb {
+    top: 80%;
+}
+
+.gk {
+    top: 92%;
+    background-color: orange;
+}
+
+#stats {
+    grid-area: stats;
+    height: fit-content;
+}
+
+#stats h3 {
+    color: #fff;
+    font-size: 36px;
+}
+
+#stats table {
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#stats table tr th {
+    border-bottom: 2px solid #666;
+}
+
+#stats table td {
+    border-top: 1px solid #666;
+}
+
+#stats table td,
+#stats table th {
+    padding: 5px 10px;
+}
+
+#stats table td:nth-child(1),
+#stats table th:nth-child(1) {
+    border-right: #666 solid 2px;
+    width: 130px;
+}
+
+#stats table tr.total td {
+    font-weight: bold;
+}
+
+#totalStats {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: small;
+    padding: 5px 0;
+}
+
+#matchbarHolder {
+    max-height: calc(100vh - 190px);
+
+}
+
+#matchbar {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 190px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    border-top: 2px solid #666;
+}
+
+.matchbarMatch {
+    border-bottom: 2px solid #666;
+    padding: 10px 0;
+    text-align: center;
+    font-size: small;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+.matchbarMatch:hover {
+    background-color: #333;
+}
+
+.matchbarMatch:active {
+    background-color: #444;
+}
+
+.matchbarMatch.matchWin {
+    background-color: #242;
+}
+
+.matchbarMatch.matchDraw {
+    background-color: #223;
+}
+
+.matchbarMatch.matchLoss {
+    background-color: #522;
+}
+
+.matchHeader span,
+.matchInfo .motm,
+.matchInfo .selected {
+    font-weight: bold;
+    color: #fff;
+}
+
+.matchHeader .matchOpponent {
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.matchHeader .matchComp,
+.matchHeader .matchDate {
+    margin-top: 5px;
+}
+
+.matchInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-height: 350px;
+    padding: 10px 5px;
+}
+
+.matchInfoAnimation {
+    transition-property: max-height, transform, padding;
+    transition-duration: 0.5s;
+}
+
+.matchInfo.hide {
+    max-height: 0px;
+    padding: 4px 5px;
+    pointer-events: none;
+    transform: scaleY(0);
+    transform-origin: top center;
+}
+
+.showMatchInfo {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.showMatchInfo div {
+    transition-property: transform;
+    transition-duration: 0.5s;
+    background-image: url(images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: 55%;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: #666 solid 2px;
+}
+
+.showMatchInfo:before {
+    content: '';
+    width: 70px;
+    height: 0px;
+    position: relative;
+    top: 10px;
+    right: 5px;
+    border-bottom: #666 solid 1px;
+}
+
+.showMatchInfo:after {
+    content: '';
+    width: 70px;
+    height: 0px;
+    position: relative;
+    top: 10px;
+    left: 5px;
+    border-bottom: #666 solid 1px;
+}
+
+.showMatchInfo.reveal div {
+    transform: rotate(180deg);
+}
+
+.matchInfo .yellowCards {
+    margin: 10px 0;
+}
+
+.matchInfo .matchEvent {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.matchInfo .home {
+    text-align: left;
+    padding-left: 20px;
+    background-position: 0% 50%;
+}
+
+.matchInfo .away {
+    text-align: right;
+    padding-right: 20px;
+    background-position: 100% 50%;
+}
+
+.matchInfo .goal {
+    background-image: url(images/football-icon.svg);
+}
+
+.matchInfo .redCard {
+    background-image: url(images/red-card.svg);
+}
+
+.matchInfo .penMiss {
+    background-image: url(images/pen-miss.svg);
+}
+
+.matchInfo .yellowCard {
+    background-image: url(images/yellow-card.svg);
+}
+
+.matchInfo .playerLink {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.matchInfo span:not(.yellowCard span) {
+    color: #fff;
+}
