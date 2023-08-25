@@ -4,10 +4,20 @@
     margin: 0;
     box-sizing: border-box;
     color: #ccc;
+
+    outline: green solid 1px;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
 }
 
 body {
     background-color: #222;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
 }
 
 header {
@@ -16,10 +26,10 @@ header {
     background-color: #333;
     background: linear-gradient(#222, #333);
     display: flex;
-    gap: 50px;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+    position: relative;
 }
 
 header h1 {
@@ -28,14 +38,68 @@ header h1 {
     font-weight: bold;
 }
 
-header img {
-    width: 100px;
+#sidebarToggle,
+#matchbarToggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 0px;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background-color, .5s;
+}
+
+#sidebarToggle:hover,
+#matchbarToggle:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+
+}
+
+#sidebarToggle {
+    left: 0;
+    border-top-right-radius: 20px;
+    background-image: url(images/players-icon.svg);
+    background-position: 50% 60%;
+    background-size: 70%;
+}
+
+#matchbarToggle {
+    right: 0;
+    border-top-left-radius: 20px;
+    background-image: url(images/calendar-icon.svg);
+    background-position: 50% 50%;
+    background-size: 50%;
+}
+
+header h1::before {
+    content: '';
+    background-image: url(images/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    display: inline-block;
+    height: 100px;
+    vertical-align: middle;
+    margin-right: 50px;
+}
+
+header h1::after {
+    content: '';
+    background-image: url(images/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    display: inline-block;
+    height: 100px;
+    vertical-align: middle;
+    margin-left: 50px;
 }
 
 main {
-    margin: 0 auto;
-    width: 70%;
-    display: flex
+    display: flex;
+    max-width: 100%;
+    position: relative;
 }
 
 #sidebarSort {
@@ -52,10 +116,11 @@ main {
 
 #sidebarHolder {
     max-height: calc(100vh - 190px);
+    width: 15%;
+    min-width: 140px;
 }
 
 #sidebar {
-    width: 175px;
     display: flex;
     flex-direction: column;
     max-height: calc(100vh - 190px);
@@ -96,7 +161,7 @@ main {
 }
 
 #profile {
-    padding: 50px 80px;
+    padding: 40px 60px 20px 60px;
     display: grid;
     grid-template-areas:
         "name  name  name"
@@ -105,7 +170,8 @@ main {
     grid-template-rows: 60px 200px 1fr;
     grid-template-columns: 200px 1fr 135px;
     gap: 50px;
-    width: 100%;
+    width: 65%;
+    min-width: 675px;
 }
 
 #playerPic {
@@ -140,6 +206,7 @@ main {
 #playerInfo {
     grid-area: info;
     display: flex;
+    flex-direction: column;
     gap: 30px;
     justify-content: center;
     text-transform: capitalize;
@@ -160,6 +227,7 @@ main {
     background: no-repeat url(images/FootballPitch.svg);
     background-size: contain;
     width: 135px;
+    height: 202px;
     position: relative;
     border-radius: 5px;
     grid-area: pitch;
@@ -256,10 +324,13 @@ main {
     text-align: left;
     width: 100%;
     border-collapse: collapse;
+    display: block;
+    overflow-x: auto;
 }
 
 #stats table tr th {
     border-bottom: 2px solid #666;
+    font-size: small;
 }
 
 #stats table td {
@@ -274,6 +345,7 @@ main {
 #stats table td:nth-child(1),
 #stats table th:nth-child(1) {
     border-right: #666 solid 2px;
+    font-size: small;
     width: 130px;
 }
 
@@ -290,11 +362,11 @@ main {
 
 #matchbarHolder {
     max-height: calc(100vh - 190px);
-
+    width: 20%;
+    min-width: 240px;
 }
 
 #matchbar {
-    width: 300px;
     display: flex;
     flex-direction: column;
     max-height: calc(100vh - 190px);
@@ -457,4 +529,136 @@ main {
 
 .matchInfo span:not(.yellowCard span) {
     color: #fff;
+}
+
+@media screen and (max-width: 1130px) {
+
+    #sidebarToggle,
+    #matchbarToggle {
+        display: block;
+    }
+
+    header h1 {
+        font-size: 52px;
+    }
+
+    header h1::before {
+        width: 64px;
+        height: 80px;
+        margin-right: 30px;
+    }
+
+    header h1::after {
+        width: 64px;
+        height: 80px;
+        margin-left: 30px;
+    }
+
+    #profile {
+        width: 100%;
+    }
+
+    #sidebarHolder,
+    #matchbarHolder {
+        display: none;
+        position: absolute;
+        top: 0;
+        background-color: #222;
+        z-index: 2;
+        max-height: calc(100vh - 130px);
+    }
+
+    #sidebar,
+    #matchbar {
+        max-height: calc(100vh - 130px);
+
+    }
+
+    #sidebarHolder.reveal,
+    #matchbarHolder.reveal {
+        display: block !important;
+    }
+
+    #matchbarHolder {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 740px) {
+
+    header {
+        height: 100px;
+    }
+
+    header h1 {
+        font-size: 46px;
+    }
+
+    header h1::before {
+        width: 40px;
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    header h1::after {
+        width: 40px;
+        height: 50px;
+        margin-left: 10px;
+    }
+
+    #profile h2 {
+        font-size: 40px;
+    }
+
+    #profile {
+        grid-template-areas:
+            "name  name  name"
+            "pic   pic  pic"
+            "info   pitch  pitch"
+            "stats stats stats";
+        place-items: center;
+        grid-template-columns: 100px 1fr 202px;
+        gap: 20px;
+        min-width: unset;
+    }
+
+    #positionGraphic {
+        transform: rotate(90deg);
+        transform-origin: 50% 50%;
+        margin: -20px 0;
+    }
+
+    .positionMarker {
+        writing-mode: sideways-lr;
+    }
+
+    #stats {
+        width: inherit;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    #profile h2 {
+        font-size: 26px;
+    }
+
+    #profile {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+    }
+
+    #playerInfo {
+        flex-direction: row;
+    }
+
+    #stats {
+        width: 300px;
+    }
 }

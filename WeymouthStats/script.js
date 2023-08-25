@@ -312,3 +312,16 @@ function getPlayerLink(name) {
     playerLink = `<span class='playerLink' onclick='loadPlayer(${playerIndex})'>${name}</span>`
     return playerLink;
 }
+
+function showSidebar() {
+    var sidebar = document.getElementById('sidebarHolder')
+    if (!sidebar.classList.contains("reveal")) sidebar.classList.add("reveal")
+    else sidebar.classList.remove("reveal")
+}
+
+function showMatchbar() {
+    var matchbar = document.getElementById('matchbarHolder')
+    if (!matchbar.classList.contains("reveal")) matchbar.classList.add("reveal")
+    else matchbar.classList.remove("reveal")
+
+}
