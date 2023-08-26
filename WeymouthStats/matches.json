@@ -224,10 +224,46 @@
         "competition": "league",
         "venue": "home",
         "homeScore": 0,
-        "awayScore": 0,
-        "attendance": 0,
-        "motm": "",
-        "events": [],
+        "awayScore": 3,
+        "attendance": 1110,
+        "motm": "N/A",
+        "events": [
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Hockey",
+                "time": "31",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Barnum-Bobb",
+                "time": "75",
+                "pen": false
+            },
+            {
+                "type": "penMiss",
+                "team": "away",
+                "player": "Ruff",
+                "time": "81",
+                "pen": false
+            },
+            {
+                "type": "red",
+                "team": "home",
+                "player": "Cheshire",
+                "time": "90+1",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Jones",
+                "time": "90+2",
+                "pen": true
+            }
+        ],
         "yellows": []
     },
     {

@@ -250,12 +250,13 @@ function buildMatchbar() {
         }
 
         if (match.yellows.length > 0 && !futureMatch) {
-            yellowsHTML += "<span>Yellows</span>";
+            yellowsHTML += `<div class='yellowCards'><span>Yellows</span>`;
             for (let i = 0; i < match.yellows.length; i++) {
                 const yellow = match.yellows[i];
                 if (match.venue == yellow.team) yellowsHTML += `<div class='matchEvent yellowCard ${yellow.team}'>${getPlayerLink(yellow.player)}</div>`
                 else yellowsHTML += `<div class='matchEvent yellowCard ${yellow.team}'>${yellow.player}</div>`
             }
+            yellowsHTML += `</div>`;
         }
 
         var resultClass = "";
@@ -271,19 +272,20 @@ function buildMatchbar() {
         }
         if (match.homeScore == match.awayScore && !futureMatch) { resultClass = "matchDraw"; totalDraws++; }
 
+        var motmHTML = match.motm == "N/A" ? "" : `<div class='motm'>⭐ ${getPlayerLink(match.motm)} ⭐</div>`;
+
         newHTML =
             `<div class='matchbarMatch ${resultClass}'>` +
             `<div class='matchHeader'>${headerHTML}</div>`;
         if (!futureMatch) {
             newHTML +=
                 `<div class='matchInfo hide'>${eventsHTML}` +
-                `<div class='yellowCards'>${yellowsHTML}</div>` +
-                `<div class='motm'>⭐ ${getPlayerLink(match.motm)} ⭐</div>` +
+                yellowsHTML +
+                motmHTML +
                 `</div>` +
                 `<div class='showMatchInfo' onclick='toggleMatchInfo(event)'><div></div></div>`
         }
-        newHTML +=
-            `</div>`;
+        newHTML += `</div>`;
 
         matchbar.innerHTML += newHTML;
     }
@@ -300,6 +302,11 @@ function toggleMatchInfo(event) {
 
 function getPlayerLink(name) {
     var playerIndex, playerLink
+
+    if (name == "N/A") {
+        playerLink = `<span>${name}</span>`
+        return playerLink;
+    }
 
     for (let i = 0; i < players.length; i++) {
         const player = players[i];
@@ -323,5 +330,4 @@ function showMatchbar() {
     var matchbar = document.getElementById('matchbarHolder')
     if (!matchbar.classList.contains("reveal")) matchbar.classList.add("reveal")
     else matchbar.classList.remove("reveal")
-
 }
