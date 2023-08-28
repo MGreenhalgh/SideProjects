@@ -4,6 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     color: #ccc;
+    scrollbar-width: thin;
 
     /* outline: green solid 1px; */
 }
@@ -11,6 +12,10 @@
 button {
     all: unset;
     cursor: pointer;
+}
+
+.hide {
+    display: none !important;
 }
 
 body {
@@ -125,7 +130,6 @@ main {
     flex-direction: column;
     max-height: calc(100vh - 190px);
     overflow-y: auto;
-    scrollbar-width: thin;
 }
 
 .sidebarPlayer {
@@ -160,7 +164,47 @@ main {
     text-transform: uppercase;
 }
 
-#profile {
+#profileHolder {
+    position: relative;
+}
+
+#profileSwitch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+#profileSwitch button {
+    height: 25px;
+    box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.4);
+    padding: 3px 6px 3px 3px;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(#333, #222);
+}
+
+#profileSwitch button.selected {
+    background: linear-gradient(#333, #555);
+    font-weight: bold;
+}
+
+#profileSwitch span {
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: 6px 50%;
+    padding-left: 26px;
+}
+
+#playerProfileSwitch span {
+    background-image: url(images/player-icon.svg);
+}
+
+#teamProfileSwitch span {
+    background-image: url(images/players-icon.svg);
+}
+
+#playerProfile {
     padding: 40px 60px 20px 60px;
     display: grid;
     grid-template-areas:
@@ -182,7 +226,7 @@ main {
     object-fit: cover;
 }
 
-#profile h2 {
+#playerProfile h2 {
     color: #fff;
     font-size: 60px;
     grid-area: name;
@@ -190,7 +234,7 @@ main {
     align-items: center;
 }
 
-#profile .captain {
+#playerProfile .captain {
     background-color: yellow;
     border-radius: 50%;
     color: #000;
@@ -254,58 +298,58 @@ main {
     opacity: 0.3;
 }
 
-.lw,
-.lm,
-.lwb,
-.lb {
+.positionMarker.lw,
+.positionMarker.lm,
+.positionMarker.lwb,
+.positionMarker.lb {
     left: 16%;
 }
 
-.st,
-.am,
-.cm,
-.dm,
-.cb,
-.gk {
+.positionMarker.st,
+.positionMarker.am,
+.positionMarker.cm,
+.positionMarker.dm,
+.positionMarker.cb,
+.positionMarker.gk {
     left: 50%
 }
 
-.rw,
-.rm,
-.rwb,
-.rb {
+.positionMarker.rw,
+.positionMarker.rm,
+.positionMarker.rwb,
+.positionMarker.rb {
     left: 82%
 }
 
-.st {
+.positionMarker.st {
     top: 12%;
 }
 
-.lw,
-.am,
-.rw {
+.positionMarker.lw,
+.positionMarker.am,
+.positionMarker.rw {
     top: 30%;
 }
 
-.lm,
-.cm,
-.rm {
+.positionMarker.lm,
+.positionMarker.cm,
+.positionMarker.rm {
     top: 50%;
 }
 
-.lwb,
-.dm,
-.rwb {
+.positionMarker.lwb,
+.positionMarker.dm,
+.positionMarker.rwb {
     top: 66%;
 }
 
-.lb,
-.cb,
-.rb {
+.positionMarker.lb,
+.positionMarker.cb,
+.positionMarker.rb {
     top: 80%;
 }
 
-.gk {
+.positionMarker.gk {
     top: 92%;
     background-color: orange;
 }
@@ -353,12 +397,89 @@ main {
     font-weight: bold;
 }
 
-#totalStats {
+#teamProfile {
+    margin-top: 40px;
     display: flex;
-    justify-content: space-evenly;
-    font-size: small;
-    padding: 5px 0;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    min-width: 675px;
+    height: fit-content;
 }
+
+#teamHolder {
+    width: 60%;
+    display: grid;
+    grid-template-rows: repeat(6, 87px);
+    grid-template-columns: repeat(3, 115px);
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    height: 100%;
+    background: url(images/FootballPitch.svg) no-repeat;
+    background-size: 100% auto;
+}
+
+#teamHolder>div {
+    border-radius: 10px;
+    border: solid 1px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: small;
+    color: #222;
+    font-weight: bold;
+    padding: 5px;
+}
+
+#teamHolder .blank {
+    visibility: hidden;
+}
+
+#teamHolder .teamPosPlayerHolder {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    overflow-y: auto;
+    height: 62px;
+}
+
+#teamHolder .st,
+#teamHolder .lw,
+#teamHolder .rw {
+    border-color: #522;
+    background-color: rgba(250, 00, 00, 0.4);
+}
+
+
+#teamHolder .am,
+#teamHolder .lm,
+#teamHolder .cm,
+#teamHolder .rm,
+#teamHolder .dm {
+    border-color: #442;
+    background-color: rgba(200, 200, 0, 0.4);
+}
+
+
+#teamHolder .lwb,
+#teamHolder .rwb,
+#teamHolder .lb,
+#teamHolder .cb,
+#teamHolder .rb {
+    border-color: #223;
+    background-color: rgba(0, 0, 200, 0.4);
+}
+
+#teamHolder .gk {
+    border-color: #242;
+    background-color: rgba(0, 100, 0, 0.4);
+}
+
 
 #matchbarHolder {
     max-height: calc(100vh - 190px);
@@ -366,12 +487,18 @@ main {
     min-width: 240px;
 }
 
+#totalStats {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: small;
+    padding: 5px 0;
+}
+
 #matchbar {
     display: flex;
     flex-direction: column;
     max-height: calc(100vh - 190px);
     overflow-y: auto;
-    scrollbar-width: thin;
     border-top: 2px solid #666;
 }
 
@@ -554,7 +681,7 @@ main {
         margin-left: 30px;
     }
 
-    #profile {
+    #playerProfile {
         width: 100%;
     }
 
@@ -606,11 +733,11 @@ main {
         margin-left: 10px;
     }
 
-    #profile h2 {
+    #playerProfile h2 {
         font-size: 40px;
     }
 
-    #profile {
+    #playerProfile {
         grid-template-areas:
             "name  name  name"
             "pic   pic  pic"
@@ -635,6 +762,10 @@ main {
     #stats {
         width: inherit;
     }
+
+    #stats table {
+        box-shadow: 6px 0px 5px -7px #666, -6px 0px 5px -7px #666;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -644,11 +775,11 @@ main {
         font-size: 30px;
     }
 
-    #profile h2 {
+    #playerProfile h2 {
         font-size: 26px;
     }
 
-    #profile {
+    #playerProfile {
         display: flex;
         flex-direction: column;
         place-items: center;

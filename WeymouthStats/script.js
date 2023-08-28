@@ -14,6 +14,7 @@ async function populatePage() {
     buildSidebar();
     buildMatchbar();
     loadPlayer(Math.floor(Math.random() * players.length));
+    loadTeamProfile();
 }
 
 function buildSidebar(event) {
@@ -101,7 +102,7 @@ function buildSidebar(event) {
 
 function loadPlayer(index) {
     const player = players[index];
-    const profile = document.getElementById('profile');
+    const playerProfile = document.getElementById('playerProfile');
 
     var captain = (player.captain ? "<div class='captain'>C</div>" : "")
 
@@ -119,7 +120,6 @@ function loadPlayer(index) {
     var totalApps = 0, totalAppsSub = 0, totalConceded = 0, totalCleanSheets = 0, totalYellows = 0, totalReds = 0, totalMotm = 0, totalGoals = 0, totalAssists = 0;
 
     for (let i = 0; i < player.stats.length + 1; i++) {
-        const comp = player.stats[i];
 
         if (i >= player.stats.length) {
 
@@ -138,7 +138,6 @@ function loadPlayer(index) {
                 `<tr>`;
             continue;
         }
-
         totalApps += player.stats[i].apps.starts;
         totalAppsSub += player.stats[i].apps.sub;
         totalConceded += player.stats[i].conceded;
@@ -161,7 +160,7 @@ function loadPlayer(index) {
             `<td>${player.stats[i].motm}</td>` +
             `<td>${player.stats[i].goals}</td>` +
             `<td>${player.stats[i].assists}</td>` +
-            `<tr>`
+            `<tr>`;
     }
 
     var newHTML =
@@ -185,7 +184,7 @@ function loadPlayer(index) {
         statsTableHTML +
         `</tbody></table>` +
         `</div>`;
-    profile.innerHTML = newHTML;
+    playerProfile.innerHTML = newHTML;
 }
 var events
 function buildMatchbar() {
@@ -272,7 +271,7 @@ function buildMatchbar() {
         }
         if (match.homeScore == match.awayScore && !futureMatch) { resultClass = "matchDraw"; totalDraws++; }
 
-        var motmHTML = match.motm == "N/A" ? "" : `<div class='motm'>⭐ ${getPlayerLink(match.motm)} ⭐</div>`;
+        if (!futureMatch) var motmHTML = match.motm == "N/A" ? "" : `<div class='motm'>⭐ ${getPlayerLink(match.motm)} ⭐</div>`;
 
         newHTML =
             `<div class='matchbarMatch ${resultClass}'>` +
@@ -320,14 +319,78 @@ function getPlayerLink(name) {
     return playerLink;
 }
 
-function showSidebar() {
-    var sidebar = document.getElementById('sidebarHolder')
-    if (!sidebar.classList.contains("reveal")) sidebar.classList.add("reveal")
-    else sidebar.classList.remove("reveal")
+function showBar(bar) {
+    switch (bar) {
+        case 'sidebar': {
+            var sidebar = document.getElementById('sidebarHolder')
+            if (!sidebar.classList.contains("reveal")) sidebar.classList.add("reveal")
+            else sidebar.classList.remove("reveal")
+            break;
+        }
+        case 'matchbar': {
+            var matchbar = document.getElementById('matchbarHolder')
+            if (!matchbar.classList.contains("reveal")) matchbar.classList.add("reveal")
+            else matchbar.classList.remove("reveal")
+            break;
+        }
+    }
 }
 
-function showMatchbar() {
-    var matchbar = document.getElementById('matchbarHolder')
-    if (!matchbar.classList.contains("reveal")) matchbar.classList.add("reveal")
-    else matchbar.classList.remove("reveal")
+function profileSwitch(profile) {
+    var playerSwitch = document.getElementById("playerProfileSwitch");
+    var teamSwitch = document.getElementById("teamProfileSwitch");
+    var playerProfile = document.getElementById("playerProfile");
+    var teamProfile = document.getElementById("teamProfile");
+    switch (profile) {
+        case "player": {
+            if (playerSwitch.classList.contains("selected")) break;
+            playerSwitch.classList.add("selected"); teamSwitch.classList.remove("selected");
+            playerProfile.classList.remove("hide"); teamProfile.classList.add("hide");
+            break;
+        }
+        case "team": {
+            if (teamSwitch.classList.contains("selected")) break;
+            teamSwitch.classList.add("selected"); playerSwitch.classList.remove("selected");
+            teamProfile.classList.remove("hide"); playerProfile.classList.add("hide");
+            break;
+        }
+    }
+}
+
+function loadTeamProfile() {
+    var teamProfile = document.getElementById("teamHolder")
+
+
+
+    for (let i = 0; i < teamProfile.children.length; i++) {
+        const pos = teamProfile.children[i];
+        var posPlayers = pos.querySelector(".teamPosPlayerHolder");
+        var posHTML = "";
+
+        function setPosPlayer(pPos) {
+            for (let i = 0; i < players.length; i++) {
+                const player = players[i];
+                if (player.position == pPos) posHTML += `<span>${player.lastName}</span>`
+            }
+        }
+
+        switch (pos.classList[0]) {
+            case "blank": { continue; }
+            case "st": { setPosPlayer("st"); break; }
+            case "lw": { setPosPlayer("lw"); break; }
+            case "am": { setPosPlayer("am"); break; }
+            case "rw": { setPosPlayer("rw"); break; }
+            case "lm": { setPosPlayer("lm"); break; }
+            case "cm": { setPosPlayer("cm"); break; }
+            case "rm": { setPosPlayer("rm"); break; }
+            case "lwb": { setPosPlayer("lwb"); break; }
+            case "dm": { setPosPlayer("dm"); break; }
+            case "rwb": { setPosPlayer("rwb"); break; }
+            case "lb": { setPosPlayer("lb"); break; }
+            case "cb": { setPosPlayer("cb"); break; }
+            case "rb": { setPosPlayer("rb"); break; }
+            case "gk": { setPosPlayer("gk"); break; }
+        }
+        posPlayers.innerHTML = posHTML;
+    }
 }

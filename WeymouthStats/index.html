@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 
@@ -14,8 +15,8 @@
 <body>
     <header>
         <h1>Weymouth FC</h1>
-        <button id="sidebarToggle" onclick="showSidebar()"></button>
-        <button id="matchbarToggle" onclick="showMatchbar()"></button>
+        <button id="sidebarToggle" onclick="showBar('sidebar')"></button>
+        <button id="matchbarToggle" onclick="showBar('matchbar')"></button>
     </header>
     <main>
         <div id="sidebarHolder">
@@ -30,7 +31,68 @@
             </select>
             <div id="sidebar"></div>
         </div>
-        <div id="profile"></div>
+        <div id="profileHolder">
+            <div id="profileSwitch">
+                <button id="playerProfileSwitch" class="selected" onclick="profileSwitch('player')">
+                    <span class="profileSwitcherText">Player</span>
+                </button>
+                <button id="teamProfileSwitch" onclick="profileSwitch('team')">
+                    <span class="profileSwitcherText">Team</span>
+                </button>
+            </div>
+            <div id="playerProfile"></div>
+            <div id="teamProfile" class="hide">
+                <!-- <img src="images/FootballPitch.svg" alt="" id="teamPitch"> -->
+                <div id="teamHolder">
+                    <div class="blank"></div>
+                    <div class="st">Striker
+                        <div class="teamPosPlayerHolder"></div>
+                    </div>
+                    <div class="blank"></div>
+                    <div class="lw">Left Wing
+                        <div class="teamPosPlayerHolder"></div>
+                    </div>
+                    <div class="am">Atacking mid
+                        <div class="teamPosPlayerHolder"></div>
+                    </div>
+                    <div class="rw">Right Wing
+                        <div class="teamPosPlayerHolder"></div>
+                    </div>
+                    <div class="lm">Left Mid
+                        <div class="teamPosPlayerHolder"></div>
+                    </div>
+                    <div class="cm">Centre Mid
+                        <div class="teamPosPlayerHolder"></div>
+                    </div>
+                    <div class="rm">Right Mid
+                        <div class="teamPosPlayerHolder"></div>
+                    </div>
+                    <div class="lwb">Left Wing Back
+                        <div class="teamPosPlayerHolder"></div>
+                    </div>
+                    <div class="dm">Defensive Mid
+                        <div class="teamPosPlayerHolder"></div>
+                    </div>
+                    <div class="rwb">Right wing Back
+                        <div class="teamPosPlayerHolder"></div>
+                    </div>
+                    <div class="lb">Left Back
+                        <div class="teamPosPlayerHolder"></div>
+                    </div>
+                    <div class="cb">Centre Back
+                        <div class="teamPosPlayerHolder"></div>
+                    </div>
+                    <div class="rb">Right Back
+                        <div class="teamPosPlayerHolder"></div>
+                    </div>
+                    <div class="blank"></div>
+                    <div class="gk">Goal Keeper
+                        <div class="teamPosPlayerHolder"></div>
+                    </div>
+                    <div class="blank"></div>
+                </div>
+            </div>
+        </div>
         <div id="matchbarHolder">
             <div id="totalStats"></div>
             <div id="matchbar"></div>

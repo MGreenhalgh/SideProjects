@@ -186,7 +186,7 @@
         "venue": "away",
         "homeScore": 1,
         "awayScore": 2,
-        "attendance": "Unknown",
+        "attendance": 588,
         "motm": "Benfield",
         "events": [
             {
@@ -214,7 +214,31 @@
         "yellows": [
             {
                 "team": "away",
+                "player": "Bearwish"
+            },
+            {
+                "team": "away",
+                "player": "Cheshire"
+            },
+            {
+                "team": "away",
+                "player": "Stagg"
+            },
+            {
+                "team": "away",
                 "player": "Rees"
+            },
+            {
+                "team": "home",
+                "player": "Williams"
+            },
+            {
+                "team": "home",
+                "player": "King"
+            },
+            {
+                "team": "home",
+                "player": "Corrigan"
             }
         ]
     },
@@ -264,7 +288,16 @@
                 "pen": true
             }
         ],
-        "yellows": []
+        "yellows": [
+            {
+                "team": "home",
+                "player": "Cheshire"
+            },
+            {
+                "team": "home",
+                "player": "Cheshire"
+            }
+        ]
     },
     {
         "date": "2023-08-28T15:00:00+0100",

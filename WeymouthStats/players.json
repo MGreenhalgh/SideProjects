@@ -294,7 +294,7 @@
                     "starts": 5,
                     "sub": 0
                 },
-                "yellows": 2,
+                "yellows": 5,
                 "reds": 1,
                 "motm": 1,
                 "goals": 0,
@@ -1200,7 +1200,7 @@
                     "starts": 5,
                     "sub": 0
                 },
-                "yellows": 1,
+                "yellows": 2,
                 "reds": 0,
                 "motm": 1,
                 "goals": 1,
@@ -1334,7 +1334,7 @@
                     "starts": 0,
                     "sub": 2
                 },
-                "yellows": 0,
+                "yellows": 1,
                 "reds": 0,
                 "motm": 0,
                 "goals": 1,
