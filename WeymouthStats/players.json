@@ -13,10 +13,10 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 5,
+                    "starts": 6,
                     "sub": 0
                 },
-                "conceded": 6,
+                "conceded": 8,
                 "cleanSheets": 1,
                 "yellows": 0,
                 "reds": 0,
@@ -154,7 +154,7 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 2,
+                    "starts": 3,
                     "sub": 0
                 },
                 "yellows": 0,
@@ -221,11 +221,11 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 2,
+                    "starts": 3,
                     "sub": 1
                 },
-                "yellows": 1,
-                "reds": 0,
+                "yellows": 3,
+                "reds": 1,
                 "motm": 0,
                 "goals": 0,
                 "assists": 0
@@ -291,7 +291,7 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 5,
+                    "starts": 6,
                     "sub": 0
                 },
                 "yellows": 5,
@@ -361,7 +361,7 @@
                 "competition": "League",
                 "apps": {
                     "starts": 5,
-                    "sub": 0
+                    "sub": 1
                 },
                 "yellows": 0,
                 "reds": 0,
@@ -557,11 +557,11 @@
         "age": "24",
         "nationality": "Sierra Leone",
         "foot": "right",
-        "position": "lm",
+        "position": "lb",
         "otherPositions": [
             "dm",
             "cm",
-            "lb",
+            "lm",
             "rm",
             "rb"
         ],
@@ -569,10 +569,10 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 2,
+                    "starts": 3,
                     "sub": 0
                 },
-                "yellows": 0,
+                "yellows": 1,
                 "reds": 0,
                 "motm": 0,
                 "goals": 0,
@@ -638,7 +638,7 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 4,
+                    "starts": 5,
                     "sub": 1
                 },
                 "yellows": 0,
@@ -708,7 +708,7 @@
                 "competition": "League",
                 "apps": {
                     "starts": 0,
-                    "sub": 4
+                    "sub": 5
                 },
                 "yellows": 0,
                 "reds": 0,
@@ -915,7 +915,7 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 5,
+                    "starts": 6,
                     "sub": 0
                 },
                 "yellows": 0,
@@ -984,7 +984,7 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 0,
+                    "starts": 1,
                     "sub": 3
                 },
                 "yellows": 1,
@@ -1126,7 +1126,7 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 4,
+                    "starts": 5,
                     "sub": 1
                 },
                 "yellows": 2,
@@ -1197,7 +1197,7 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 5,
+                    "starts": 6,
                     "sub": 0
                 },
                 "yellows": 2,
@@ -1331,7 +1331,7 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 0,
+                    "starts": 1,
                     "sub": 2
                 },
                 "yellows": 1,
@@ -1466,7 +1466,7 @@
                 "competition": "League",
                 "apps": {
                     "starts": 0,
-                    "sub": 2
+                    "sub": 3
                 },
                 "yellows": 1,
                 "reds": 0,

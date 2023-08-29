@@ -173,6 +173,10 @@ main {
     top: 0;
     left: 50%;
     transform: translate(-50%, 0%);
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
 }
 
 #profileSwitch button {
@@ -408,14 +412,14 @@ main {
 }
 
 #teamHolder {
-    width: 60%;
+    width: 405px;
     display: grid;
-    grid-template-rows: repeat(6, 87px);
-    grid-template-columns: repeat(3, 115px);
+    grid-template-rows: repeat(6, 93px);
+    grid-template-columns: repeat(3, 120px);
     justify-content: center;
     align-items: center;
     place-items: center;
-    gap: 10px;
+    gap: 5px;
     margin-top: 10px;
     padding-top: 20px;
     padding-bottom: 10px;
@@ -443,9 +447,23 @@ main {
 #teamHolder .teamPosPlayerHolder {
     display: flex;
     flex-direction: column;
-    color: #fff;
     overflow-y: auto;
-    height: 62px;
+    height: 68px;
+}
+
+#teamHolder .teamPosPlayerHolder span {
+    text-shadow: 0 0 2px #000;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+#teamHolder .teamPosPlayerHolder .playerLink {
+    color: #fff;
+}
+
+#teamHolder .teamPosPlayerHolder .otherPosition {
+    color: #aaa;
+    font-size: smaller;
 }
 
 #teamHolder .st,
@@ -766,6 +784,10 @@ main {
     #stats table {
         box-shadow: 6px 0px 5px -7px #666, -6px 0px 5px -7px #666;
     }
+
+    #teamProfile {
+        min-width: unset;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -773,6 +795,10 @@ main {
 
     header h1 {
         font-size: 30px;
+    }
+
+    #playerProfile {
+        padding: 40px 0 0 0;
     }
 
     #playerProfile h2 {
@@ -791,5 +817,15 @@ main {
 
     #stats {
         width: 300px;
+    }
+
+    #teamHolder {
+        width: 325px;
+        grid-template-rows: repeat(6, 74px);
+        grid-template-columns: repeat(3, 104px);
+    }
+
+    #teamHolder .teamPosPlayerHolder {
+        height: 50px
     }
 }

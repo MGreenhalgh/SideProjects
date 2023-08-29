@@ -304,12 +304,47 @@
         "opposition": "Worthing",
         "competition": "league",
         "venue": "away",
-        "homeScore": 0,
+        "homeScore": 2,
         "awayScore": 0,
-        "attendance": 0,
-        "motm": "",
-        "events": [],
-        "yellows": []
+        "attendance": 1600,
+        "motm": "N/A",
+        "events": [
+            {
+                "type": "goal",
+                "team": "home",
+                "player": "Fish",
+                "time": "30",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "home",
+                "player": "Aguiar",
+                "time": "60",
+                "pen": true
+            },
+            {
+                "type": "red",
+                "team": "away",
+                "player": "Howe",
+                "time": "83",
+                "pen": false
+            }
+        ],
+        "yellows": [
+            {
+                "team": "away",
+                "player": "Sesay"
+            },
+            {
+                "team": "away",
+                "player": "Howe"
+            },
+            {
+                "team": "away",
+                "player": "Howe"
+            }
+        ]
     },
     {
         "date": "2023-09-02T15:00:00+0100",

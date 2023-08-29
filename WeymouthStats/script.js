@@ -185,6 +185,7 @@ function loadPlayer(index) {
         `</tbody></table>` +
         `</div>`;
     playerProfile.innerHTML = newHTML;
+    if (document.getElementById("teamProfileSwitch").classList.contains("selected")) profileSwitch("player");
 }
 var events
 function buildMatchbar() {
@@ -370,26 +371,37 @@ function loadTeamProfile() {
         function setPosPlayer(pPos) {
             for (let i = 0; i < players.length; i++) {
                 const player = players[i];
-                if (player.position == pPos) posHTML += `<span>${player.lastName}</span>`
+                if (player.position == pPos) posHTML += getPlayerLink(player.lastName)
+            }
+        }
+
+        function setOtherPosPlayer(pPos) {
+            for (let i = 0; i < players.length; i++) {
+                const player = players[i];
+                var otherPos = player.otherPositions.find(obj => { return obj === pPos })
+
+                if (otherPos) {
+                    posHTML += `<span class='otherPosition ${getPlayerLink(player.lastName).slice(13)}`;
+                }
             }
         }
 
         switch (pos.classList[0]) {
             case "blank": { continue; }
-            case "st": { setPosPlayer("st"); break; }
-            case "lw": { setPosPlayer("lw"); break; }
-            case "am": { setPosPlayer("am"); break; }
-            case "rw": { setPosPlayer("rw"); break; }
-            case "lm": { setPosPlayer("lm"); break; }
-            case "cm": { setPosPlayer("cm"); break; }
-            case "rm": { setPosPlayer("rm"); break; }
-            case "lwb": { setPosPlayer("lwb"); break; }
-            case "dm": { setPosPlayer("dm"); break; }
-            case "rwb": { setPosPlayer("rwb"); break; }
-            case "lb": { setPosPlayer("lb"); break; }
-            case "cb": { setPosPlayer("cb"); break; }
-            case "rb": { setPosPlayer("rb"); break; }
-            case "gk": { setPosPlayer("gk"); break; }
+            case "st": { setPosPlayer("st"); setOtherPosPlayer("st"); break; }
+            case "lw": { setPosPlayer("lw"); setOtherPosPlayer("lw"); break; }
+            case "am": { setPosPlayer("am"); setOtherPosPlayer("am"); break; }
+            case "rw": { setPosPlayer("rw"); setOtherPosPlayer("rw"); break; }
+            case "lm": { setPosPlayer("lm"); setOtherPosPlayer("lm"); break; }
+            case "cm": { setPosPlayer("cm"); setOtherPosPlayer("cm"); break; }
+            case "rm": { setPosPlayer("rm"); setOtherPosPlayer("rm"); break; }
+            case "lwb": { setPosPlayer("lwb"); setOtherPosPlayer("lwb"); break; }
+            case "dm": { setPosPlayer("dm"); setOtherPosPlayer("dm"); break; }
+            case "rwb": { setPosPlayer("rwb"); setOtherPosPlayer("rwb"); break; }
+            case "lb": { setPosPlayer("lb"); setOtherPosPlayer("lb"); break; }
+            case "cb": { setPosPlayer("cb"); setOtherPosPlayer("cb"); break; }
+            case "rb": { setPosPlayer("rb"); setOtherPosPlayer("rb"); break; }
+            case "gk": { setPosPlayer("gk"); setOtherPosPlayer("gk"); break; }
         }
         posPlayers.innerHTML = posHTML;
     }
