@@ -295,7 +295,23 @@
             },
             {
                 "team": "home",
+                "player": "Bearwish"
+            },
+            {
+                "team": "home",
                 "player": "Cheshire"
+            },
+            {
+                "team": "away",
+                "player": "Jenkins"
+            },
+            {
+                "team": "away",
+                "player": "Ebuzoeme"
+            },
+            {
+                "team": "away",
+                "player": "Watts"
             }
         ]
     },
@@ -306,7 +322,7 @@
         "venue": "away",
         "homeScore": 2,
         "awayScore": 0,
-        "attendance": 1600,
+        "attendance": 1613,
         "motm": "N/A",
         "events": [
             {
@@ -338,11 +354,23 @@
             },
             {
                 "team": "away",
+                "player": "Rollinson"
+            },
+            {
+                "team": "away",
                 "player": "Howe"
             },
             {
                 "team": "away",
                 "player": "Howe"
+            },
+            {
+                "team": "home",
+                "player": "Felix"
+            },
+            {
+                "team": "home",
+                "player": "Colbran"
             }
         ]
     },
@@ -351,12 +379,57 @@
         "opposition": "Maidstone United",
         "competition": "league",
         "venue": "home",
-        "homeScore": 0,
-        "awayScore": 0,
-        "attendance": 0,
-        "motm": "",
-        "events": [],
-        "yellows": []
+        "homeScore": 2,
+        "awayScore": 3,
+        "attendance": 905,
+        "motm": "N/A",
+        "events": [
+            {
+                "type": "goal",
+                "team": "home",
+                "player": "Rowan",
+                "time": "26",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Amantchi",
+                "time": "33",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "home",
+                "player": "Thomson",
+                "time": "50",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Amantchi",
+                "time": "60",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Sole",
+                "time": "72",
+                "pen": false
+            }
+        ],
+        "yellows": [
+            {
+                "team": "away",
+                "player": "Wanajau-Amith"
+            },
+            {
+                "team": "home",
+                "player": "Howe"
+            }
+        ]
     },
     {
         "date": "2023-09-05T19:45:00+0100",

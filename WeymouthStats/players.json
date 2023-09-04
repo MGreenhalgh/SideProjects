@@ -13,10 +13,10 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 6,
+                    "starts": 7,
                     "sub": 0
                 },
-                "conceded": 8,
+                "conceded": 11,
                 "cleanSheets": 1,
                 "yellows": 0,
                 "reds": 0,
@@ -154,7 +154,7 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 3,
+                    "starts": 4,
                     "sub": 0
                 },
                 "yellows": 0,
@@ -222,9 +222,9 @@
                 "competition": "League",
                 "apps": {
                     "starts": 3,
-                    "sub": 1
+                    "sub": 2
                 },
-                "yellows": 3,
+                "yellows": 4,
                 "reds": 1,
                 "motm": 0,
                 "goals": 0,
@@ -360,7 +360,7 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 5,
+                    "starts": 6,
                     "sub": 1
                 },
                 "yellows": 0,
@@ -429,13 +429,13 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 5,
+                    "starts": 56,
                     "sub": 0
                 },
                 "yellows": 2,
                 "reds": 0,
                 "motm": 0,
-                "goals": 0,
+                "goals": 1,
                 "assists": 0
             },
             {
@@ -496,7 +496,7 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 0,
+                    "starts": 1,
                     "sub": 0
                 },
                 "yellows": 0,
@@ -569,7 +569,7 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 3,
+                    "starts": 4,
                     "sub": 0
                 },
                 "yellows": 1,
@@ -639,7 +639,7 @@
                 "competition": "League",
                 "apps": {
                     "starts": 5,
-                    "sub": 1
+                    "sub": 2
                 },
                 "yellows": 0,
                 "reds": 0,
@@ -916,9 +916,9 @@
                 "competition": "League",
                 "apps": {
                     "starts": 6,
-                    "sub": 0
+                    "sub": 1
                 },
-                "yellows": 0,
+                "yellows": 1,
                 "reds": 0,
                 "motm": 0,
                 "goals": 1,
@@ -984,7 +984,7 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 1,
+                    "starts": 2,
                     "sub": 3
                 },
                 "yellows": 1,
@@ -1197,10 +1197,10 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 6,
+                    "starts": 7,
                     "sub": 0
                 },
-                "yellows": 2,
+                "yellows": 3,
                 "reds": 0,
                 "motm": 1,
                 "goals": 1,
@@ -1264,14 +1264,14 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 5,
+                    "starts": 6,
                     "sub": 0
                 },
                 "yellows": 2,
                 "reds": 0,
                 "motm": 0,
                 "goals": 1,
-                "assists": 1
+                "assists": 2
             },
             {
                 "competition": "FA Cup",
@@ -1398,7 +1398,7 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 5,
+                    "starts": 6,
                     "sub": 0
                 },
                 "yellows": 1,
@@ -1599,13 +1599,13 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 0,
+                    "starts": 1,
                     "sub": 1
                 },
                 "yellows": 0,
                 "reds": 0,
                 "motm": 0,
-                "goals": 0,
+                "goals": 1,
                 "assists": 0
             },
             {
