@@ -423,11 +423,19 @@
         "yellows": [
             {
                 "team": "away",
-                "player": "Wanajau-Amith"
+                "player": "Lucas"
+            },
+            {
+                "team": "away",
+                "player": "Smith"
             },
             {
                 "team": "home",
                 "player": "Howe"
+            },
+            {
+                "team": "home",
+                "player": "Sesay"
             }
         ]
     },
@@ -436,29 +444,214 @@
         "opposition": "Hampton & Richmond",
         "competition": "league",
         "venue": "away",
-        "homeScore": 0,
+        "homeScore": 1,
         "awayScore": 0,
-        "attendance": 0,
-        "motm": "",
-        "events": [],
-        "yellows": []
+        "attendance": 723,
+        "motm": "N/A",
+        "events": [
+            {
+                "type": "goal",
+                "team": "home",
+                "player": "Seymour",
+                "time": "89",
+                "pen": true
+            }
+        ],
+        "yellows": [
+            {
+                "team": "away",
+                "player": "O'Connell"
+            },
+            {
+                "team": "away",
+                "player": "Rowan"
+            },
+            {
+                "team": "away",
+                "player": "Cheshire"
+            }
+        ]
     },
     {
         "date": "2023-09-09T15:00:00+0100",
         "opposition": "Dover",
         "competition": "league",
         "venue": "away",
-        "homeScore": 0,
-        "awayScore": 0,
-        "attendance": 0,
-        "motm": "",
-        "events": [],
-        "yellows": []
+        "homeScore": 1,
+        "awayScore": 3,
+        "attendance": 566,
+        "motm": "Touray",
+        "events": [
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Touray",
+                "time": "9",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Touray",
+                "time": "45+3",
+                "pen": false
+            },
+            {
+                "type": "red",
+                "team": "home",
+                "player": "Powell",
+                "time": "45+5",
+                "pen": false
+            },
+            {
+                "type": "red",
+                "team": "away",
+                "player": "Bearwish",
+                "time": "52",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Rollinson",
+                "time": "84",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "home",
+                "player": "Charles-Cook",
+                "time": "87",
+                "pen": false
+            }
+        ],
+        "yellows": [
+            {
+                "team": "away",
+                "player": "Cheshire"
+            },
+            {
+                "team": "away",
+                "player": "Bearwish"
+            },
+            {
+                "team": "away",
+                "player": "Bearwish"
+            },
+            {
+                "team": "home",
+                "player": "Powell"
+            },
+            {
+                "team": "home",
+                "player": "Powell"
+            }
+        ]
+    },
+    {
+        "date": "2023-09-16T15:00:00+0100",
+        "opposition": "Highworth Town",
+        "competition": "FA Cup",
+        "venue": "away",
+        "homeScore": 1,
+        "awayScore": 3,
+        "attendance": 412,
+        "motm": "Touray",
+        "events": [
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Touray",
+                "time": "24",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "home",
+                "player": "Whelan",
+                "time": "50",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Brooks",
+                "time": "70",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Touray",
+                "time": "86",
+                "pen": true
+            }
+        ],
+        "yellows": [
+            {
+                "team": "away",
+                "player": "Rowan"
+            },
+            {
+                "team": "away",
+                "player": "Howe"
+            },
+            {
+                "team": "home",
+                "player": "Cheetam"
+            }
+        ]
     },
     {
         "date": "2023-09-23T15:00:00+0100",
         "opposition": "Chippenham",
         "competition": "league",
+        "venue": "home",
+        "homeScore": 1,
+        "awayScore": 1,
+        "attendance": 1099,
+        "motm": "Touray",
+        "events": [
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "McClure",
+                "time": "33",
+                "pen": true
+            },
+            {
+                "type": "red",
+                "team": "home",
+                "player": "Thomson",
+                "time": "56",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Touray",
+                "time": "60",
+                "pen": false
+            },
+            {
+                "type": "penMiss",
+                "team": "away",
+                "player": "Touray",
+                "time": "78",
+                "pen": false
+            }
+        ],
+        "yellows": [
+            {
+                "team": "home",
+                "player": "Durojaiye"
+            }
+        ]
+    },
+    {
+        "date": "2023-09-30T15:00:00+0100",
+        "opposition": "Bath",
+        "competition": "FA Cup",
         "venue": "home",
         "homeScore": 0,
         "awayScore": 0,

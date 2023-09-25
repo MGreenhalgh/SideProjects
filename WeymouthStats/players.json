@@ -1,9 +1,11 @@
 [
     {
+        "id": 1,
         "firstName": "Gerard",
         "lastName": "Benfield",
         "pic": "images/players/Gerard-Benfield.webp",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "25",
         "nationality": "England",
         "foot": "right",
@@ -13,10 +15,10 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 7,
+                    "starts": 10,
                     "sub": 0
                 },
-                "conceded": 11,
+                "conceded": 14,
                 "cleanSheets": 1,
                 "yellows": 0,
                 "reds": 0,
@@ -27,10 +29,10 @@
             {
                 "competition": "FA Cup",
                 "apps": {
-                    "starts": 0,
+                    "starts": 1,
                     "sub": 0
                 },
-                "conceded": 0,
+                "conceded": 1,
                 "cleanSheets": 0,
                 "yellows": 0,
                 "reds": 0,
@@ -69,10 +71,12 @@
         ]
     },
     {
+        "id": 2,
         "firstName": "Harry",
         "lastName": "Dillon",
         "pic": "images/players/Harry-Dillon.webp",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "21",
         "nationality": "England",
         "foot": "right",
@@ -138,10 +142,12 @@
         ]
     },
     {
+        "id": 3,
         "firstName": "Calvin",
         "lastName": "Brooks",
         "pic": "images/players/Calvin-Brooks.webp",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "29",
         "nationality": "England",
         "foot": "right",
@@ -154,7 +160,7 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 4,
+                    "starts": 6,
                     "sub": 0
                 },
                 "yellows": 0,
@@ -167,14 +173,14 @@
                 "competition": "FA Cup",
                 "apps": {
                     "starts": 0,
-                    "sub": 0
+                    "sub": 1
                 },
                 "conceded": 0,
                 "cleanSheets": 0,
                 "yellows": 0,
                 "reds": 0,
                 "motm": 0,
-                "goals": 0,
+                "goals": 1,
                 "assists": 0
             },
             {
@@ -208,20 +214,24 @@
         ]
     },
     {
+        "id": 4,
         "firstName": "Teddy",
         "lastName": "Howe",
         "pic": "images/players/Teddy-Howe.webp",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "24",
         "nationality": "England",
         "foot": "right",
         "position": "rb",
-        "otherPositions": [],
+        "otherPositions": [
+            "rwb"
+        ],
         "stats": [
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 3,
+                    "starts": 5,
                     "sub": 2
                 },
                 "yellows": 4,
@@ -233,12 +243,12 @@
             {
                 "competition": "FA Cup",
                 "apps": {
-                    "starts": 0,
+                    "starts": 1,
                     "sub": 0
                 },
                 "conceded": 0,
                 "cleanSheets": 0,
-                "yellows": 0,
+                "yellows": 1,
                 "reds": 0,
                 "motm": 0,
                 "goals": 0,
@@ -275,10 +285,12 @@
         ]
     },
     {
+        "id": 5,
         "firstName": "Anthony",
         "lastName": "Cheshire",
         "pic": "images/players/Anthony-Cheshire.webp",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "21",
         "nationality": "England",
         "foot": "right",
@@ -291,10 +303,10 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 6,
+                    "starts": 8,
                     "sub": 0
                 },
-                "yellows": 5,
+                "yellows": 7,
                 "reds": 1,
                 "motm": 1,
                 "goals": 0,
@@ -303,7 +315,7 @@
             {
                 "competition": "FA Cup",
                 "apps": {
-                    "starts": 0,
+                    "starts": 1,
                     "sub": 0
                 },
                 "conceded": 0,
@@ -345,22 +357,25 @@
         ]
     },
     {
+        "id": 6,
         "firstName": "Leo",
         "lastName": "Hamblin",
         "pic": "images/players/Leo-Hamblin.webp",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "20",
         "nationality": "England",
         "foot": "left",
         "position": "lb",
         "otherPositions": [
-            "cb"
+            "cb",
+            "lwb"
         ],
         "stats": [
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 6,
+                    "starts": 9,
                     "sub": 1
                 },
                 "yellows": 0,
@@ -372,7 +387,7 @@
             {
                 "competition": "FA Cup",
                 "apps": {
-                    "starts": 0,
+                    "starts": 1,
                     "sub": 0
                 },
                 "conceded": 0,
@@ -414,10 +429,12 @@
         ]
     },
     {
+        "id": 7,
         "firstName": "Charlie",
         "lastName": "Rowan",
         "pic": "images/players/Charlie-Rowan.webp",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "25",
         "nationality": "England",
         "foot": "right",
@@ -429,10 +446,10 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 56,
+                    "starts": 9,
                     "sub": 0
                 },
-                "yellows": 2,
+                "yellows": 3,
                 "reds": 0,
                 "motm": 0,
                 "goals": 1,
@@ -441,12 +458,12 @@
             {
                 "competition": "FA Cup",
                 "apps": {
-                    "starts": 0,
+                    "starts": 1,
                     "sub": 0
                 },
                 "conceded": 0,
                 "cleanSheets": 0,
-                "yellows": 0,
+                "yellows": 1,
                 "reds": 0,
                 "motm": 0,
                 "goals": 0,
@@ -483,10 +500,12 @@
         ]
     },
     {
+        "id": 8,
         "firstName": "Jordon",
         "lastName": "Thompson",
         "pic": "images/players/Jordon-Thompson.webp",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "24",
         "nationality": "England",
         "foot": "right",
@@ -496,11 +515,11 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 1,
+                    "starts": 4,
                     "sub": 0
                 },
                 "yellows": 0,
-                "reds": 0,
+                "reds": 1,
                 "motm": 0,
                 "goals": 0,
                 "assists": 0
@@ -508,7 +527,7 @@
             {
                 "competition": "FA Cup",
                 "apps": {
-                    "starts": 0,
+                    "starts": 1,
                     "sub": 0
                 },
                 "conceded": 0,
@@ -550,10 +569,12 @@
         ]
     },
     {
+        "id": 9,
         "firstName": "David",
         "lastName": "Sesay",
         "pic": "images/players/David-Sesay.png",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "24",
         "nationality": "Sierra Leone",
         "foot": "right",
@@ -570,9 +591,9 @@
                 "competition": "League",
                 "apps": {
                     "starts": 4,
-                    "sub": 0
+                    "sub": 1
                 },
-                "yellows": 1,
+                "yellows": 2,
                 "reds": 0,
                 "motm": 0,
                 "goals": 0,
@@ -623,10 +644,12 @@
         ]
     },
     {
+        "id": 10,
         "firstName": "Keelan",
         "lastName": "O'Connell",
         "pic": "images/players/Keelan-OConnell.webp",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "23",
         "nationality": "England",
         "foot": "right",
@@ -638,10 +661,10 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 5,
+                    "starts": 7,
                     "sub": 2
                 },
-                "yellows": 0,
+                "yellows": 1,
                 "reds": 0,
                 "motm": 0,
                 "goals": 0,
@@ -650,7 +673,7 @@
             {
                 "competition": "FA Cup",
                 "apps": {
-                    "starts": 0,
+                    "starts": 1,
                     "sub": 0
                 },
                 "conceded": 0,
@@ -692,10 +715,12 @@
         ]
     },
     {
+        "id": 11,
         "firstName": "Frankie",
         "lastName": "Monk",
         "pic": "images/players/Frankie-Monk.webp",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "19",
         "nationality": "England",
         "foot": "right",
@@ -708,7 +733,7 @@
                 "competition": "League",
                 "apps": {
                     "starts": 0,
-                    "sub": 5
+                    "sub": 7
                 },
                 "yellows": 0,
                 "reds": 0,
@@ -720,7 +745,7 @@
                 "competition": "FA Cup",
                 "apps": {
                     "starts": 0,
-                    "sub": 0
+                    "sub": 1
                 },
                 "conceded": 0,
                 "cleanSheets": 0,
@@ -728,7 +753,7 @@
                 "reds": 0,
                 "motm": 0,
                 "goals": 0,
-                "assists": 0
+                "assists": 1
             },
             {
                 "competition": "FA Vase",
@@ -761,10 +786,13 @@
         ]
     },
     {
+        "id": 12,
         "firstName": "Max",
         "lastName": "Hemmings",
         "pic": "images/players/Max-Hemmings.webp",
         "captain": false,
+        "unavailableForSeason": "injured",
+        "unavailableReason": "Knee injury: 05/08/2023",
         "age": "26",
         "nationality": "England",
         "foot": "right",
@@ -831,10 +859,12 @@
         ]
     },
     {
+        "id": 13,
         "firstName": "Harvey",
         "lastName": "Slade",
         "pic": "images/players/Harvey-Slade.webp",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "20",
         "nationality": "England",
         "foot": "right",
@@ -846,7 +876,7 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 0,
+                    "starts": 2,
                     "sub": 0
                 },
                 "yellows": 0,
@@ -858,7 +888,7 @@
             {
                 "competition": "FA Cup",
                 "apps": {
-                    "starts": 0,
+                    "starts": 1,
                     "sub": 0
                 },
                 "conceded": 0,
@@ -900,10 +930,12 @@
         ]
     },
     {
+        "id": 14,
         "firstName": "Joel",
         "lastName": "Rollinson",
         "pic": "images/players/Joel-Rollinson.webp",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "24",
         "nationality": "Australia",
         "foot": "right",
@@ -915,19 +947,19 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 6,
+                    "starts": 8,
                     "sub": 1
                 },
                 "yellows": 1,
                 "reds": 0,
                 "motm": 0,
-                "goals": 1,
+                "goals": 2,
                 "assists": 1
             },
             {
                 "competition": "FA Cup",
                 "apps": {
-                    "starts": 0,
+                    "starts": 1,
                     "sub": 0
                 },
                 "conceded": 0,
@@ -969,10 +1001,12 @@
         ]
     },
     {
+        "id": 15,
         "firstName": "Scott",
         "lastName": "Rees",
         "pic": "images/players/Scott-Rees.webp",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "27",
         "nationality": "England",
         "foot": "right",
@@ -1038,10 +1072,154 @@
         ]
     },
     {
+        "id": 16,
+        "firstName": "Elliot",
+        "lastName": "Bolton",
+        "pic": "images/players/Scott-Rees.webp",
+        "captain": false,
+        "unavailableForSeason": false,
+        "age": "21",
+        "nationality": "England",
+        "foot": "right",
+        "position": "dm",
+        "otherPositions": [
+            "cm"
+        ],
+        "stats": [
+            {
+                "competition": "League",
+                "apps": {
+                    "starts": 0,
+                    "sub": 1
+                },
+                "yellows": 0,
+                "reds": 0,
+                "motm": 0,
+                "goals": 0,
+                "assists": 0
+            },
+            {
+                "competition": "FA Cup",
+                "apps": {
+                    "starts": 0,
+                    "sub": 0
+                },
+                "conceded": 0,
+                "cleanSheets": 0,
+                "yellows": 0,
+                "reds": 0,
+                "motm": 0,
+                "goals": 0,
+                "assists": 0
+            },
+            {
+                "competition": "FA Vase",
+                "apps": {
+                    "starts": 0,
+                    "sub": 0
+                },
+                "conceded": 0,
+                "cleanSheets": 0,
+                "yellows": 0,
+                "reds": 0,
+                "motm": 0,
+                "goals": 0,
+                "assists": 0
+            },
+            {
+                "competition": "Dorset Cup",
+                "apps": {
+                    "starts": 0,
+                    "sub": 0
+                },
+                "conceded": 0,
+                "cleanSheets": 0,
+                "yellows": 0,
+                "reds": 0,
+                "motm": 0,
+                "goals": 0,
+                "assists": 0
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "firstName": "Olu",
+        "lastName": "Durojaiye",
+        "pic": "images/players/Scott-Rees.webp",
+        "captain": false,
+        "unavailableForSeason": false,
+        "age": "30",
+        "nationality": "England",
+        "foot": "right",
+        "position": "dm",
+        "otherPositions": [
+            "cm"
+        ],
+        "stats": [
+            {
+                "competition": "League",
+                "apps": {
+                    "starts": 2,
+                    "sub": 1
+                },
+                "yellows": 0,
+                "reds": 0,
+                "motm": 0,
+                "goals": 0,
+                "assists": 1
+            },
+            {
+                "competition": "FA Cup",
+                "apps": {
+                    "starts": 1,
+                    "sub": 0
+                },
+                "conceded": 0,
+                "cleanSheets": 0,
+                "yellows": 0,
+                "reds": 0,
+                "motm": 0,
+                "goals": 0,
+                "assists": 0
+            },
+            {
+                "competition": "FA Vase",
+                "apps": {
+                    "starts": 0,
+                    "sub": 0
+                },
+                "conceded": 0,
+                "cleanSheets": 0,
+                "yellows": 0,
+                "reds": 0,
+                "motm": 0,
+                "goals": 0,
+                "assists": 0
+            },
+            {
+                "competition": "Dorset Cup",
+                "apps": {
+                    "starts": 0,
+                    "sub": 0
+                },
+                "conceded": 0,
+                "cleanSheets": 0,
+                "yellows": 0,
+                "reds": 0,
+                "motm": 0,
+                "goals": 0,
+                "assists": 0
+            }
+        ]
+    },
+    {
+        "id": 18,
         "firstName": "Tyrique",
         "lastName": "Clarke",
         "pic": "images/players/Tyrique-Clarke.webp",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "22",
         "nationality": "England",
         "foot": "left",
@@ -1108,10 +1286,13 @@
         ]
     },
     {
+        "id": 19,
         "firstName": "Josh",
         "lastName": "McQuoid",
         "pic": "images/players/Josh-McQuoid.webp",
         "captain": false,
+        "unavailableForSeason": "injured",
+        "unavailableReason": "Cancer: 28/08/2023",
         "age": "33",
         "nationality": "England",
         "foot": "right",
@@ -1180,10 +1361,12 @@
         ]
     },
     {
+        "id": 20,
         "firstName": "Tom",
         "lastName": "Bearwish",
         "pic": "images/players/tom-bearwish.webp",
         "captain": true,
+        "unavailableForSeason": false,
         "age": "23",
         "nationality": "England",
         "foot": "right",
@@ -1197,14 +1380,14 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 7,
+                    "starts": 10,
                     "sub": 0
                 },
-                "yellows": 3,
-                "reds": 0,
+                "yellows": 5,
+                "reds": 1,
                 "motm": 1,
                 "goals": 1,
-                "assists": 1
+                "assists": 2
             },
             {
                 "competition": "FA Cup",
@@ -1251,10 +1434,12 @@
         ]
     },
     {
+        "id": 21,
         "firstName": "Brandon",
         "lastName": "Goodship",
         "pic": "images/players/Brandon-Goodship.webp",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "28",
         "nationality": "England",
         "foot": "right",
@@ -1318,10 +1503,12 @@
         ]
     },
     {
+        "id": 22,
         "firstName": "Tom",
         "lastName": "Stagg",
         "pic": "images/players/Tom-Stagg.webp",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "20",
         "nationality": "England",
         "foot": "left",
@@ -1332,7 +1519,7 @@
                 "competition": "League",
                 "apps": {
                     "starts": 1,
-                    "sub": 2
+                    "sub": 3
                 },
                 "yellows": 1,
                 "reds": 0,
@@ -1385,10 +1572,12 @@
         ]
     },
     {
+        "id": 23,
         "firstName": "Dan",
         "lastName": "Roberts",
         "pic": "images/players/Dan-Roberts.webp",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "25",
         "nationality": "England",
         "foot": "right",
@@ -1398,7 +1587,7 @@
             {
                 "competition": "League",
                 "apps": {
-                    "starts": 6,
+                    "starts": 8,
                     "sub": 0
                 },
                 "yellows": 1,
@@ -1452,10 +1641,13 @@
         ]
     },
     {
+        "id": 24,
         "firstName": "Norman",
         "lastName": "Wabo",
         "pic": "images/players/Norman-Wabo.webp",
         "captain": false,
+        "unavailableForSeason": "contract",
+        "unavailableReason": "Contract terminated: 13/09/2023",
         "age": "25",
         "nationality": "England",
         "foot": "right",
@@ -1519,10 +1711,12 @@
         ]
     },
     {
+        "id": 25,
         "firstName": "Nahum",
         "lastName": "Melvin-Lambert",
         "pic": "images/players/Nahum-Melvin-Lambert.webp",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "20",
         "nationality": "England",
         "foot": "right",
@@ -1533,7 +1727,7 @@
                 "competition": "League",
                 "apps": {
                     "starts": 0,
-                    "sub": 0
+                    "sub": 1
                 },
                 "yellows": 0,
                 "reds": 0,
@@ -1586,10 +1780,12 @@
         ]
     },
     {
+        "id": 26,
         "firstName": "Ben",
         "lastName": "Thomson",
         "pic": "images/players/ben-thomson.jpg",
         "captain": false,
+        "unavailableForSeason": false,
         "age": "33",
         "nationality": "England",
         "foot": "right",
@@ -1600,7 +1796,7 @@
                 "competition": "League",
                 "apps": {
                     "starts": 1,
-                    "sub": 1
+                    "sub": 3
                 },
                 "yellows": 0,
                 "reds": 0,
@@ -1612,6 +1808,20 @@
                 "competition": "FA Cup",
                 "apps": {
                     "starts": 0,
+                    "sub": 1
+                },
+                "conceded": 0,
+                "cleanSheets": 0,
+                "yellows": 0,
+                "reds": 0,
+                "motm": 0,
+                "goals": 0,
+                "assists": 0
+            },
+            {
+                "competition": "FA Vase",
+                "apps": {
+                    "starts": 0,
                     "sub": 0
                 },
                 "conceded": 0,
@@ -1620,6 +1830,61 @@
                 "reds": 0,
                 "motm": 0,
                 "goals": 0,
+                "assists": 0
+            },
+            {
+                "competition": "Dorset Cup",
+                "apps": {
+                    "starts": 0,
+                    "sub": 0
+                },
+                "conceded": 0,
+                "cleanSheets": 0,
+                "yellows": 0,
+                "reds": 0,
+                "motm": 0,
+                "goals": 0,
+                "assists": 0
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "firstName": "Ezio",
+        "lastName": "Touray",
+        "pic": "images/players/ben-thomson.jpg",
+        "captain": false,
+        "unavailableForSeason": false,
+        "age": "19",
+        "nationality": "Italy",
+        "foot": "right",
+        "position": "st",
+        "otherPositions": [],
+        "stats": [
+            {
+                "competition": "League",
+                "apps": {
+                    "starts": 2,
+                    "sub": 0
+                },
+                "yellows": 0,
+                "reds": 0,
+                "motm": 2,
+                "goals": 3,
+                "assists": 0
+            },
+            {
+                "competition": "FA Cup",
+                "apps": {
+                    "starts": 1,
+                    "sub": 0
+                },
+                "conceded": 0,
+                "cleanSheets": 0,
+                "yellows": 0,
+                "reds": 0,
+                "motm": 1,
+                "goals": 2,
                 "assists": 0
             },
             {

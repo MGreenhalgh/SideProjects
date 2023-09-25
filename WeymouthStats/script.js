@@ -13,7 +13,7 @@ async function populatePage() {
     if (players) console.log('JSON data loaded');
     buildSidebar();
     buildMatchbar();
-    loadPlayer(Math.floor(Math.random() * players.length));
+    loadPlayer(players[Math.floor(Math.random() * players.length)].id);
     loadTeamProfile();
 }
 
@@ -91,7 +91,7 @@ function buildSidebar(event) {
             }
         }
         newHTML +=
-            `<div class='sidebarPlayer' onclick='loadPlayer(${i})'>` +
+            `<div class='sidebarPlayer${player.unavailableForSeason ? " faded" : ""}' onclick='loadPlayer(${player.id})'>` +
             `<div class='sidebarPlayerName'>${player.firstName} ${player.lastName}</div>` +
             `<div class='sidebarPlayerInfo'><span class = 'sidebarPlayerInfoPos'>${player.position}</span>-${infoHTML}</div>` +
             "</div>";
@@ -100,8 +100,9 @@ function buildSidebar(event) {
     document.getElementById('sidebarSort').selectedIndex = 0;
 }
 
-function loadPlayer(index) {
-    const player = players[index];
+function loadPlayer(player) {
+    console.log(player);
+    if (typeof player == "number") player = players.find((p) => { return p.id === player });
     const playerProfile = document.getElementById('playerProfile');
 
     var captain = (player.captain ? "<div class='captain'>C</div>" : "")
@@ -115,7 +116,6 @@ function loadPlayer(index) {
     }
 
     var gkHeaders = "", gkStats = "", statsTableHTML = "";
-    if (player.position == "gk") gkHeaders = "<th>Conceded</th><th>Clean Sheets</th>"
 
     var totalApps = 0, totalAppsSub = 0, totalConceded = 0, totalCleanSheets = 0, totalYellows = 0, totalReds = 0, totalMotm = 0, totalGoals = 0, totalAssists = 0;
 
@@ -123,7 +123,12 @@ function loadPlayer(index) {
 
         if (i >= player.stats.length) {
 
-            if (player.position == "gk") gkStats = `<td>${totalConceded}</td><td>${totalCleanSheets}</td>`
+            var outfieldStats = `<td>${totalGoals}</td><td>${totalAssists}</td>`
+
+            if (player.position == "gk") {
+                gkStats = `<td>${totalConceded}</td><td>${totalCleanSheets}</td>`
+                outfieldStats = "";
+            }
 
             statsTableHTML +=
                 `<tr class='total'>` +
@@ -133,11 +138,11 @@ function loadPlayer(index) {
                 `<td>${totalYellows}</td>` +
                 `<td>${totalReds}</td>` +
                 `<td>${totalMotm}</td>` +
-                `<td>${totalGoals}</td>` +
-                `<td>${totalAssists}</td>` +
+                outfieldStats +
                 `<tr>`;
             continue;
         }
+
         totalApps += player.stats[i].apps.starts;
         totalAppsSub += player.stats[i].apps.sub;
         totalConceded += player.stats[i].conceded;
@@ -148,7 +153,15 @@ function loadPlayer(index) {
         totalGoals += player.stats[i].goals;
         totalAssists += player.stats[i].assists;
 
-        if (player.position == "gk") gkStats = `<td>${player.stats[i].conceded}</td><td>${player.stats[i].cleanSheets}</td>`
+        var outfieldStats = `<td>${player.stats[i].goals}</td><td>${player.stats[i].assists}</td>`
+        var outfieldHeaders = "<th>Goals</th><th>Assists</th>";
+
+        if (player.position == "gk") {
+            gkStats = `<td>${player.stats[i].conceded}</td><td>${player.stats[i].cleanSheets}</td>`;
+            gkHeaders = "<th>Conceded</th><th>Clean Sheets</th>";
+            outfieldStats = "";
+            outfieldHeaders = "";
+        }
 
         statsTableHTML +=
             `<tr>` +
@@ -158,13 +171,13 @@ function loadPlayer(index) {
             `<td>${player.stats[i].yellows}</td>` +
             `<td>${player.stats[i].reds}</td>` +
             `<td>${player.stats[i].motm}</td>` +
-            `<td>${player.stats[i].goals}</td>` +
-            `<td>${player.stats[i].assists}</td>` +
+            outfieldStats +
             `<tr>`;
     }
 
     var newHTML =
         `<h2>${player.firstName} ${player.lastName + captain}</h2>` +
+        `${player.unavailableForSeason ? `<div class='unavailable'>UNAVAILABLE: ${player.unavailableReason}</div>` : ''}` +
         `<img id='playerPic' src='${player.pic}' alt='${player.firstName} ${player.lastName}'>` +
         `<div id='playerInfo'>` +
         `<div><div>Age</div><span>${player.age}</span></div>` +
@@ -178,7 +191,7 @@ function loadPlayer(index) {
         `<div id='stats'>` +
         `<h3>Stats</h3>` +
         `<table><thead><tr>` +
-        `<th>Competition</th><th>Apps(sub)</th>${gkHeaders}<th>Yellows</th><th>Reds</th><th>MotM</th><th>Goals</th><th>Assists</th>` +
+        `<th>Competition</th><th>Apps(sub)</th>${gkHeaders}<th>Yellows</th><th>Reds</th><th>MotM</th>${outfieldHeaders}` +
         `</tr></thead>` +
         `<tbody>` +
         statsTableHTML +
@@ -187,6 +200,7 @@ function loadPlayer(index) {
     playerProfile.innerHTML = newHTML;
     if (document.getElementById("teamProfileSwitch").classList.contains("selected")) profileSwitch("player");
 }
+
 var events
 function buildMatchbar() {
     const matchbar = document.getElementById('matchbar')
@@ -214,9 +228,11 @@ function buildMatchbar() {
                 `<span class='matchWeymouth'>Weymouth</span>`;
         }
         var comp = (match.competition == "league") ? "National League South" : match.competition
+
+        let month = matchDate.getMonth() + 1
         headerHTML +=
             `<div class='matchComp'>${comp}</div>` +
-            `<div class='matchDate'>${matchDate.getDate().toString().padStart(2, '0')}/${matchDate.getMonth().toString().padStart(2, '0')}/${matchDate.getFullYear()} ${matchDate.getHours().toString().padStart(2, '0')}:${matchDate.getMinutes().toString().padStart(2, '0')}</div>`;
+            `<div class='matchDate'>${matchDate.getDate().toString().padStart(2, '0')}/${month.toString().padStart(2, '0')}/${matchDate.getFullYear()} ${matchDate.getHours().toString().padStart(2, '0')}:${matchDate.getMinutes().toString().padStart(2, '0')}</div>`;
         if (!futureMatch) headerHTML += `<div class='matchAttendance'>Attendance: ${match.attendance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div>`;
 
         if (match.events.length > 0 && !futureMatch) {
@@ -301,7 +317,7 @@ function toggleMatchInfo(event) {
 }
 
 function getPlayerLink(name) {
-    var playerIndex, playerLink
+    var playerId, playerLink
 
     if (name == "N/A") {
         playerLink = `<span>${name}</span>`
@@ -312,11 +328,11 @@ function getPlayerLink(name) {
         const player = players[i];
         if (player.lastName.toLowerCase() != name.toLowerCase()) continue;
         else {
-            playerIndex = i;
+            playerId = player.id;
         }
     }
-    if (playerIndex === undefined) return console.log(`Bad name: ${name}, index: ${playerIndex}`);
-    playerLink = `<span class='playerLink' onclick='loadPlayer(${playerIndex})'>${name}</span>`
+    if (playerId === undefined) return console.log(`Bad name: ${name}, index: ${playerId}`);
+    playerLink = `<span class='playerLink' onclick='loadPlayer(${playerId})'>${name}</span>`
     return playerLink;
 }
 
@@ -361,29 +377,31 @@ function profileSwitch(profile) {
 function loadTeamProfile() {
     var teamProfile = document.getElementById("teamHolder")
 
-
-
     for (let i = 0; i < teamProfile.children.length; i++) {
         const pos = teamProfile.children[i];
         var posPlayers = pos.querySelector(".teamPosPlayerHolder");
         var posHTML = "";
 
         function setPosPlayer(pPos) {
-            for (let i = 0; i < players.length; i++) {
-                const player = players[i];
-                if (player.position == pPos) posHTML += getPlayerLink(player.lastName)
-            }
+
+            const posArray = players.filter(p => {
+                return p.position == pPos && !p.unavailableForSeason
+            })
+
+            posArray.forEach(pos => {
+                posHTML += getPlayerLink(pos.lastName)
+            });
         }
 
         function setOtherPosPlayer(pPos) {
-            for (let i = 0; i < players.length; i++) {
-                const player = players[i];
-                var otherPos = player.otherPositions.find(obj => { return obj === pPos })
 
-                if (otherPos) {
-                    posHTML += `<span class='otherPosition ${getPlayerLink(player.lastName).slice(13)}`;
-                }
-            }
+            const otherPosArray = players.filter(p => {
+                return p.otherPositions.includes(pPos)
+            })
+
+            otherPosArray.forEach(pos => {
+                posHTML += `<span class='otherPosition ${getPlayerLink(pos.lastName).slice(13)}`;
+            });
         }
 
         switch (pos.classList[0]) {

@@ -141,6 +141,10 @@ main {
     transition: background-color 0.2s;
 }
 
+.sidebarPlayer.faded * {
+    color: #444
+}
+
 .sidebarPlayer:hover {
     background-color: #333;
 }
@@ -217,7 +221,7 @@ main {
         "stats stats stats";
     grid-template-rows: 60px 200px 1fr;
     grid-template-columns: 200px 1fr 135px;
-    gap: 50px;
+    gap: 40px;
     width: 65%;
     min-width: 675px;
 }
@@ -232,10 +236,18 @@ main {
 
 #playerProfile h2 {
     color: #fff;
-    font-size: 60px;
+    font-size: xxx-large;
     grid-area: name;
     display: flex;
     align-items: center;
+}
+
+.unavailable {
+    grid-area: name;
+    margin-top: 60px;
+    font-size: large;
+    color: red;
+    font-weight: bold;
 }
 
 #playerProfile .captain {
@@ -394,7 +406,7 @@ main {
 #stats table th:nth-child(1) {
     border-right: #666 solid 2px;
     font-size: small;
-    width: 130px;
+    width: 100px;
 }
 
 #stats table tr.total td {
@@ -591,6 +603,7 @@ main {
     cursor: pointer;
     display: flex;
     justify-content: center;
+    padding-top: 5px;
 }
 
 .showMatchInfo div {
