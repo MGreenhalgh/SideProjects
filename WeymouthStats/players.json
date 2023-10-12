@@ -573,7 +573,7 @@
         "id": 9,
         "firstName": "David",
         "lastName": "Sesay",
-        "pic": "images/players/David-Sesay.png",
+        "pic": "images/players/David-Sesay.PNG",
         "captain": false,
         "unavailableForSeason": false,
         "age": "24",
@@ -1025,7 +1025,7 @@
                 "yellows": 0,
                 "reds": 0,
                 "motm": 0,
-                "goals": 2,
+                "goals": 0,
                 "assists": 0
             },
             {
@@ -1436,7 +1436,7 @@
         "id": 20,
         "firstName": "Tom",
         "lastName": "Bearwish",
-        "pic": "images/players/tom-bearwish.webp",
+        "pic": "images/players/Tom-Bearwish.webp",
         "captain": true,
         "unavailableForSeason": false,
         "age": "23",

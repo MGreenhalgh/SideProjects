@@ -66,6 +66,18 @@ function buildSidebar(event) {
             });
             break;
         }
+        case "yellows": {
+            players.sort((a, b) => {
+                return (a.stats[0].yellows - b.stats[0].yellows) * -1;
+            });
+            break;
+        }
+        case "reds": {
+            players.sort((a, b) => {
+                return (a.stats[0].reds - b.stats[0].reds) * -1;
+            });
+            break;
+        }
     }
     for (let i = 0; i < players.length; i++) {
         const player = players[i];
@@ -87,6 +99,14 @@ function buildSidebar(event) {
             }
             case "assists": {
                 infoHTML = `<span>Assists: ${player.stats[0].assists}</span>`
+                break;
+            }
+            case "yellows": {
+                infoHTML = `<span>Yellows: ${player.stats[0].yellows}</span>`
+                break;
+            }
+            case "reds": {
+                infoHTML = `<span>Reds: ${player.stats[0].reds}</span>`
                 break;
             }
         }

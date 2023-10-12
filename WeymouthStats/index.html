@@ -21,13 +21,15 @@
     <main>
         <div id="sidebarHolder">
             <select onchange="buildSidebar(event)" name="sidebarSort" id="sidebarSort">
-                <option hidden default selected disabled value="Sort...">Sort...</option>
+                <option hidden default selected disabled value="Sort(League)...">Sort(League)...</option>
                 <option value="alphabetical">Alphabetical</option>
                 <option value="position">Position</option>
                 <option value="age">Age</option>
                 <option value="appearances">Appearances</option>
                 <option value="goals">Goals</option>
                 <option value="assists">Assists</option>
+                <option value="yellows">Yellows</option>
+                <option value="reds">Reds</option>
             </select>
             <div id="sidebar"></div>
         </div>
@@ -42,7 +44,6 @@
             </div>
             <div id="playerProfile"></div>
             <div id="teamProfile" class="hide">
-                <!-- <img src="images/FootballPitch.svg" alt="" id="teamPitch"> -->
                 <div id="teamHolder">
                     <div class="blank"></div>
                     <div class="st">Striker
