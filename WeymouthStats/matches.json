@@ -653,12 +653,47 @@
         "opposition": "Bath",
         "competition": "FA Cup",
         "venue": "home",
-        "homeScore": 0,
-        "awayScore": 0,
-        "attendance": 0,
-        "motm": "",
-        "events": [],
-        "yellows": []
+        "homeScore": 1,
+        "awayScore": 2,
+        "attendance": 1085,
+        "motm": "Brooks",
+        "events": [
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Hayfield",
+                "time": "40",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "away",
+                "player": "Wilson",
+                "time": "77",
+                "pen": false
+            },
+            {
+                "type": "goal",
+                "team": "home",
+                "player": "Bearwish",
+                "time": "90+1",
+                "pen": false
+            }
+        ],
+        "yellows": [
+            {
+                "team": "home",
+                "player": "Bearwish"
+            },
+            {
+                "team": "home",
+                "player": "Hamlin"
+            },
+            {
+                "team": "away",
+                "player": "Hayfield"
+            }
+        ]
     },
     {
         "date": "2023-10-07T15:00:00+0100",
@@ -667,10 +702,15 @@
         "venue": "away",
         "homeScore": 0,
         "awayScore": 0,
-        "attendance": 0,
+        "attendance": 976,
         "motm": "",
         "events": [],
-        "yellows": []
+        "yellows": [
+            {
+                "team": "away",
+                "player": "Thompson"
+            }
+        ]
     },
     {
         "date": "2023-10-14T15:00:00+0100",
